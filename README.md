@@ -1,0 +1,1 @@
+IMAGE PROCESSING LABS. BSU. Yuliya Harshkova
