@@ -11,7 +11,7 @@ TF_RECORDS_PATH = "C:\\Users\\Yuliya_Harshkova\\PycharmProjects\\first_work\\sou
 
 
 data_root = pathlib.Path(PATH)
-
+#потеря конткеста и текстуры
 
 
 print(data_root)
@@ -28,7 +28,7 @@ print(image_count)
 print(all_image_paths[0])
 dataset = tf.data.Dataset.from_tensor_slices(all_image_paths).map(tf.io.read_file)
 print(dataset)
-
+tf.data.TFRecordDataset
 def preprocess_image(image):
   image = tf.image.decode_jpeg(image, channels=3)
   image = tf.image.resize(image, [192, 192])
@@ -41,5 +41,6 @@ def load_and_preprocess_image(path):
   return preprocess_image(image)
 
 it = iter(dataset)
+iterator = tf.data.Iterator;
 
 print(next(it).numpy())
